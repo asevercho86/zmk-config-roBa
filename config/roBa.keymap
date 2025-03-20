@@ -60,6 +60,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        encorder_up_down: encorder_up_down {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "ENCORDER_UP_DOWN";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+        };
     };
 
     keymap {
@@ -73,7 +80,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 2 INT_HENKAN                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&encorder_up_down SCRL_UP SCRL_DOWN>;
         };
 
         FUNCTION {
