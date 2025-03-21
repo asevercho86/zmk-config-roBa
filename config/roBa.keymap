@@ -74,10 +74,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                          &kp T                                                          &kp Y             &kp U  &lt 5 I    &kp O    &kp P
-&mt LEFT_ALT A    &kp S         &kp D         &kp F                          &kp G        &trans                             &kp SQT        &kp H             &kp J  &kp K      &kp L    &kp ENTER
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                          &kp B        &kp MINUS                          &kp B          &kp N             &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 INT_MUHENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 2 INT_HENKAN                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                          &kp T                                                 &kp Y             &kp U  &lt 5 I    &kp O    &kp P
+&mt LEFT_ALT A    &kp S         &kp D         &kp F                          &kp G        &trans                    &kp SQT        &kp H             &kp J  &kp K      &kp L    &kp ENTER
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                          &kp B        &kp MINUS                 &kp B          &kp N             &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 2 INT_MUHENKAN  &lt 3 SPACE  &lt_to_layer_0 3 TAB      &kp BACKSPACE  &lt 2 INT_HENKAN                             &kp DEL
             >;
 
             sensor-bindings = <&encorder_up_down SCRL_UP SCRL_DOWN>;
@@ -94,10 +94,10 @@
 
         NUM {
             bindings = <
-&kp ESCAPE  &kp N7              &kp N8               &kp N9        &kp N0                         &kp LBKT  &kp RBKT  &kp BACKSLASH  &kp SQT    &trans
-&trans      &kp NUMBER_4        &kp NUMBER_5         &kp N6        &kp FSLH   &trans      &trans  &trans    &trans    &kp UP         &trans     &trans
-&trans      &kp NUMBER_1        &kp NUMBER_2         &kp NUMBER_3  &kp EQUAL  &trans      &trans  &trans    &kp LEFT  &kp DOWN       &kp RIGHT  &trans
-&trans      &mt LEFT_WIN ENTER  &mt LEFT_ALT PERIOD  &trans        &trans     &trans      &trans  &trans                                        &trans
+&kp ESCAPE  &kp N7              &kp N8               &kp N9        &kp N0                         &kp LBKT       &kp RBKT  &kp BACKSLASH  &kp SQT    &trans
+&trans      &kp NUMBER_4        &kp NUMBER_5         &kp N6        &kp FSLH   &trans      &trans  &kp SEMICOLON  &trans    &kp UP         &trans     &trans
+&trans      &kp NUMBER_1        &kp NUMBER_2         &kp NUMBER_3  &kp EQUAL  &trans      &trans  &trans         &kp LEFT  &kp DOWN       &kp RIGHT  &trans
+&trans      &mt LEFT_WIN ENTER  &mt LEFT_ALT PERIOD  &trans        &trans     &trans      &trans  &trans                                             &trans
             >;
         };
 
