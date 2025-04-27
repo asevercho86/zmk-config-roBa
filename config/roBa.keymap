@@ -50,6 +50,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        rotate_msc_up_down: rotate_msc_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ROTATE_MSC_UP_DOWN";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
     };
 
     keymap {
@@ -63,7 +70,7 @@
 &mt LEFT_CONTROL CAPSLOCK  &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 BACKSPACE  &lt 2 SPACE  &lt_to_layer_0 3 DELETE      &lt 2 INT_HENKAN  &lt 1 SPACE                             &mt RIGHT_CONTROL K_CONTEXT_MENU
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&rotate_msc_up_down>;
         };
 
         SYMBOLS {
@@ -91,16 +98,14 @@
 &none   &kp F1  &kp F2   &kp F3   &kp F4   &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans   &trans   &trans   &trans      &trans  &trans                          &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans        &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &msc SCRL_UP  &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans        &mkp MB1  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB1  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
             >;
         };
 
